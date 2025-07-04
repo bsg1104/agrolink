@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroLink</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>AgroLink</h1>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <h2>Empowering Cocoa & Coffee Farmers</h2>
+            <p>Connecting farmers directly to buyers, lenders, and tools.</p>
+        </section>
+        <section class="listing-section">
+            <h2>List Your Crop</h2>
+            <form id="listingForm" enctype="multipart/form-data">
+                <div class="form-row">
+                    <input type="text" id="farmer" placeholder="Your Name" required />
+                    <input type="text" id="crop" placeholder="Crop Type (e.g., Cocoa)" required />
+                </div>
+                <div class="form-row">
+                    <input type="number" id="quantity" placeholder="Quantity (kg)" required />
+                    <input type="number" id="price" placeholder="Price ($/kg)" required />
+                </div>
+                <div class="form-row">
+                    <input type="file" id="imageUpload" accept="image/*" />
+                </div>
+                <button type="submit">Add Listing</button>
+            </form>
+            <div id="form-success" style="display:none;color:#388e3c;margin-top:1rem;font-weight:600;">Listing added successfully!</div>
+            <div id="image-preview" style="margin-top:1rem;"></div>
+        </section>
+        <section>
+            <h2>Available Listings</h2>
+            <ul id="listings"></ul>
+        </section>
+    </main>
+    <footer>
+        <div>Contact: info@agrolink.com &nbsp;|&nbsp; © 2025 AgroLink</div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
